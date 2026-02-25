@@ -8,3 +8,5 @@ statsmodels
 ipykernel
 geopandas
 factor_analyzer
+libpysal
+esda
