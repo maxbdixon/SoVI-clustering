@@ -11,4 +11,5 @@ belongs to  a unique cluster of similar tracts, or if it is being pulled equally
 
 Both methods accomplish the goal of reducing a large set of variables into a smaller set of interpretable groups. But K-means may be 
 more "honest" than SoVI scores because it allows for more complex interpretations of the interactions between input variables. Nothing 
-is "cancelled out" by the factor loadings. 
+is "cancelled out" by the factor loadings in clustering assignment, even when clusters are created based on PCA components and not the
+raw variables themselves. 
