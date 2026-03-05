@@ -13,3 +13,22 @@ Both methods accomplish the goal of reducing a large set of variables into a sma
 more "honest" than SoVI scores because it allows for more complex interpretations of the interactions between input variables. Nothing 
 is "cancelled out" by the factor loadings in clustering assignment, even when clusters are created based on PCA components and not the
 raw variables themselves. 
+
+
+- edit:
+A key limitation of traditional SoVI formulations is the dependence on PCA with additive aggregation of factor scores, 
+which can obscure substantively meaningful co-occurrence patterns among indicators. For example, a census tract may simultaneously exhibit 
+high poverty and high median housing value. If these variables load in opposite directions with similar magnitudes across retained components, 
+their contributions to the composite index can partially offset, reducing apparent vulnerability in the final score despite 
+the tract’s structurally complex profile.
+
+Cluster-based approaches (e.g., k-means) provide a different representation: tracts are assigned based on multivariate similarity, 
+so variables are not collapsed into a single signed sum in the same way. This can preserve mixed socioeconomic signals and reveal 
+interpretable tract types (e.g., transitional or internally heterogeneous neighborhoods) that are difficult to capture with a 
+unidimensional index. Fuzzy c-means (FCM) adds further value by estimating graded membership across clusters, allowing identification of 
+tracts that sit between vulnerability regimes rather than forcing hard assignment.
+
+Both PCA-based indexing and clustering are dimension-reduction strategies, but they answer different questions: 
+SoVI estimates position on a continuous latent vulnerability axis, whereas clustering identifies typologies of social-environmental structure. 
+Accordingly, clustering may yield a more nuanced characterization of complex tract profiles in contexts where compensatory effects 
+in additive indices are a concern.
